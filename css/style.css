@@ -495,8 +495,7 @@ position: relative;
   margin-left: 10px;
 }
 .distribution{
-  
-margin-left: 93px;
+margin-left:auto;
 font-weight: 700;
   font-size: 14px;
   line-height: 16px;
@@ -514,11 +513,12 @@ padding-left: 16px;
 color: var(--white-element);
 background-color: var(--bg-color-accent);
 border: 1px solid rgba(255, 255, 255, 0.3);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-  border-radius: 4px;
-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+border-radius: 4px;
+transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.distribution-form:focus{
+.distribution-form:focus,
+.distribution-form:hover{
 border: 1px solid var(--hover-effect);
 }
 .mail-sent{
@@ -684,8 +684,9 @@ pointer-events: none;
   min-width: 528px;
   top: 50%;
   left: 50%;
+  padding: 40px;
   transform: translate(-50%, -50%) scale(1);
-  transition: transform 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   background: #FFFFFF;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -704,7 +705,13 @@ pointer-events: none;
   align-items: center;
   background: #FFFFFF;
   border-radius: 100%;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+              border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.close-button:hover{
+  fill: var(--focus-color);
+  border: 1px solid var(--focus-color)
 }
 .registrated-form{
   font-weight: 700;
@@ -714,10 +721,13 @@ pointer-events: none;
     letter-spacing: 0.03em;
     margin-bottom: 12px;
 }
-.modal-thumb{
-margin: 40px;
+.form-item{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: var(--font-color);
 }
-
 textarea{
   resize: none;
   width: auto;
@@ -727,7 +737,7 @@ textarea{
   padding-left: 16px;
   padding-top: 12px;
   outline: none;
-  border: 1px solid var(--main-color);
+  border: 1px solid rgba(33, 33, 33, 0.2);
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 textarea:focus{
@@ -757,7 +767,7 @@ textarea:focus{
   margin-bottom: 10px;
   padding-left: 42px;
   outline: none;
-  border: 1px solid var(--main-color);
+  border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
